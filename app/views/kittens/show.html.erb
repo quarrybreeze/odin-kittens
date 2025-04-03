@@ -1,0 +1,10 @@
+<h1>Kittens#show</h1>
+<p>Find me in app/views/kittens/show.html.erb</p>
+
+Name: <%= @kitten.name %> <br>
+Age: <%= @kitten.age %> <br>
+Cuteness: <%= @kitten.cuteness %> <br>
+Softness: <%= @kitten.softness %> <br>
+
+<%= button_to "Edit", edit_kitten_path(@kitten), method: :get%><br>
+<%= button_to "Delete", kitten_path(@kitten), method: :delete, data: { "turbo-method": :delete } %>

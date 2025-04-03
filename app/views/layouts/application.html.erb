@@ -23,6 +23,9 @@
   </head>
 
   <body>
-    <%= yield %>
+    <%= render "flash_messages" if !flash.empty? %>
+    <%= yield %><br>
+    <%= button_to "New", new_kitten_path, method: :get %><br>
+    <%= button_to "Home", root_path, method: :get %>
   </body>
 </html>
